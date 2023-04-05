@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "ru" }}">
 
   {%- include head.html -%}
 
-  <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <body class="d-flex flex-column">
+    <main class="flex-grow-1 flex-shrink-0">
+      <header role="navigation" class="navbar navbar-dark">
+        {%- include header.html -%}
+      </header>
+      {{ content }}
     </main>
-
-    {%- include footer.html -%}
-
+    <footer class="flex-grow-0 flex-shrink-0 py-3 bg-light border-top text-muted">
+      {%- include footer.html -%}
+    </footer>
   </body>
 
 </html>

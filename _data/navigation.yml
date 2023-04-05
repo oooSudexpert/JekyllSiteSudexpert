@@ -2,16 +2,16 @@
   url: /
 
 - title: Услуги
-  url: /expertise/
+  url: /expertise
 
 - title: Контакты
-  url: /contacts/
+  url: /contacts
   
 - title: Отзывы
-  url: /reviews/
+  url: /reviews
 
 - title: Цены
-  url: /prices/
+  url: /prices
 
 - title: Документы
-  url: /documents/
+  url: /documents

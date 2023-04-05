@@ -4,9 +4,11 @@
   {%- include head.html -%}
 
   <body class="d-flex flex-column">
-    <main class="flex-grow-1 flex-shrink-0">      
+    <main class="d-flex flex-column flex-grow-1 flex-shrink-0">      
       {%- include header.html -%}
-      {{ content }}     
+      <div class="site-content flex-grow-1">
+        {{ content }}   
+      </div>        
     </main>
     <footer class="flex-grow-0 flex-shrink-0 py-3 bg-light border-top text-muted">
       {%- include footer.html -%}

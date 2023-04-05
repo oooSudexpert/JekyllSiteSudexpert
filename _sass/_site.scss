@@ -1,7 +1,6 @@
 html, body {
     min-width: 320px;
     height: 100%;
-    overflow: hidden;
 }
 
 h1:focus {
@@ -13,7 +12,9 @@ h1.display-1 {
     line-height: 1;
 }
 
-
+.site-content {
+    position: relative;
+}
 
 .ul-icons {
     list-style-type: none;

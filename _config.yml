@@ -16,7 +16,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - LICENSE.txt
+  - README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

@@ -1,9 +1,15 @@
+environment: production
+lang: ru
 title: Судэксперт
-email: sud163@yandex.ru
+phone: +7 (8482) 63-12-88
+email: sud163@ya.ru
 description: >- # this means to ignore newlines until "baseurl:"
   Независимая экспертиза
+permalink: /:categories/:year/:month/:day/:slug/
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jekyll.garibaldicastle.ru" # the base hostname & protocol for your site, e.g. http://example.com
+plugins:
+  - jekyll-sitemap
 
 # sass:
 #   style: compressed
@@ -16,6 +22,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
+
 exclude:
   - LICENSE.txt
   - README.md

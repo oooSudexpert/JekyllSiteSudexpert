@@ -5,14 +5,16 @@
   url: /about
 
 - title: Услуги
-  url: /services
-
-- title: Цены
-  url: /price
-  
-- title: Отзывы
-  url: /reviews
+  url: /expertise/
 
 - title: Контакты
-  url: /contacts
+  url: /contacts/
+  
+- title: Отзывы
+  url: /reviews/
 
+- title: Цены
+  url: /prices/
+
+- title: Документы
+  url: /documents/

@@ -6,15 +6,12 @@
 
 - title: Услуги
   url: /expertise/
-
-- title: Контакты
-  url: /contacts/
   
-- title: Отзывы
-  url: /reviews/
-
 - title: Цены
   url: /prices/
 
-- title: Документы
-  url: /documents/
+- title: Отзывы
+  url: /reviews/
+
+- title: Контакты
+  url: /contacts/

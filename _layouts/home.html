@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="home-container container">
-  
+  *************
+  {%- include block_callback.html -%}
+  *************
   {{ content }}
 
   {%- if site.posts.size > 0 -%}

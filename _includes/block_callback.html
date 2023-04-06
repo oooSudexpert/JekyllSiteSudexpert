@@ -1,0 +1,9 @@
+<form  action="https://functions.yandexcloud.net/d4el63afa9h0t7ogmdt8" method="GET">
+    <input name="username" type="hidden" id="name" value="" >
+    <input name="sity" type="hidden" id="sity" value="{{ site.sity | escape }}">
+    <input name="message" type="tel" id="phonenumber" placeholder="Ваш номер телефона" class="form-control form-control-lg mt-3 valid" required>    
+    <button type="submit" class="btn btn-lg btn-primary shadow mt-3">Отправить</button>
+    <p class="text-muted mt-3"><small>Отправляя данные, вы соглашаетесь с <a href="/privacy/">политикой конфиденциальности</a></small></p>
+</form>
+
+{{ site.sity | escape }}

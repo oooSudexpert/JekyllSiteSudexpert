@@ -4,8 +4,10 @@
   {%- include head.html -%}
 
   <body class="d-flex flex-column">
-    <main class="d-flex flex-column flex-grow-1 flex-shrink-0">      
-      {%- include header.html -%}
+    <main class="d-flex flex-column flex-grow-1 flex-shrink-0">     
+      <header role="navigation" class="navbar navbar-dark">
+        {%- include navbar.html -%}
+      </header>       
       <div class="site-content flex-grow-1">
         {{ content }}   
       </div>        

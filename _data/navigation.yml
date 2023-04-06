@@ -1,17 +1,18 @@
 - title: Главная
   url: /
 
-- title: Услуги
-  url: /expertise
+- title: О нас
+  url: /about
 
-- title: Контакты
-  url: /contacts
+- title: Услуги
+  url: /services
+
+- title: Цены
+  url: /price
   
 - title: Отзывы
   url: /reviews
 
-- title: Цены
-  url: /prices
+- title: Контакты
+  url: /contacts
 
-- title: Документы
-  url: /documents

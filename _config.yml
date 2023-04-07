@@ -1,7 +1,6 @@
 environment: production
 lang: ru
 title: Судэксперт
-sity: tlt
 phone: +7 (8482) 63-12-88
 email: sud163@ya.ru
 description: >- # this means to ignore newlines until "baseurl:"
@@ -10,6 +9,7 @@ permalink: /:categories/:year/:month/:day/:slug/
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jekyll.garibaldicastle.ru" # the base hostname & protocol for your site, e.g. http://example.com
 telegram_api: "https://functions.yandexcloud.net/d4el63afa9h0t7ogmdt8"
+telegram_sity: test
 plugins:
   - jekyll-sitemap
 

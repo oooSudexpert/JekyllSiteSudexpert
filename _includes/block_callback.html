@@ -1,7 +1,19 @@
-<form  action="{{ site.telegram_api }}" method="GET">
+<form class="form-callback"  action="{{ site.telegram_api }}" method="GET">
     <input name="username" value="" class="visually-hidden">
-    <input name="sity" value="{{ site.sity | escape }}" class="visually-hidden">
+    <input name="sity" value="{{ site.telegram_sity | escape }}" class="visually-hidden">
     <input name="message" type="tel" id="phonenumber" placeholder="Ваш номер телефона" class="form-control form-control-lg mt-3 valid" required>    
     <button type="submit" class="btn btn-lg btn-primary shadow mt-3">Отправить</button>
     <p class="text-muted mt-3"><small>Отправляя данные, вы соглашаетесь с <a href="/privacy/">политикой конфиденциальности</a></small></p>
 </form>
+
+
+<p>123</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>

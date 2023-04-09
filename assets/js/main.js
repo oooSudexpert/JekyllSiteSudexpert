@@ -1,20 +1,52 @@
-"use strict";
+(function () {
+  'use strict'
+  
+  function ready() {
+    const forms = document.querySelectorAll('.form-callback')
+    
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {    
+      form.addEventListener('submit', event => {
 
-let telegram_forms = document.getElementsByClassName('form-callback');
-let array_forms = Array.prototype.from(telegram_forms);
-console.log(array_forms);
+        event.preventDefault()
+        event.stopPropagation()
 
-for (let i = 0; i < array_forms.length; i++) {
-    console.log(array_forms[i]);
-}
+        let url = form.action;
+        const formData = new FormData(form);  
 
+        if( (formData.get("username")).length > 0 ){ // проверка на спам
+          return false;    
+        }
+        
+        const params = Array.from(formData);  
+        let query = new URLSearchParams(params);
+        const queryString = query.toString();
 
-// console.log(telegram_forms);
+        if( !validationForm(formData) ){
+          return;
+        }
 
-/*
-var button = document.querySelector("button");
-console.log(button);
-  button.addEventListener("click", function() {
-    console.log("Кнопка нажата.");
-  });
-*/
+        form.checkValidity();
+
+        let req = new XMLHttpRequest();
+        req.open("GET", url + '?' + queryString, false);
+        req.send(null);
+        console.log(req);
+        if(req.status == 200){
+          form.classList.add('was-validated');
+        }   
+        
+      }, false)
+    })
+  }
+
+  function onlyPhoneNumber (str){
+    str = String(str); //
+    var regexp = /[\d]/g; //выбираем только цифры
+    var NumbersArr = String(str.match(regexp)); //делаем из элемента массива с цфрами - строку, получаем их через запятую
+    var NumbersStr = NumbersArr.replace( /,/g, "" ); //убираем запятую  
+    return NumbersStr;
+  };
+
+  document.addEventListener("DOMContentLoaded", ready);
+})()

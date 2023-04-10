@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Твори добро в Jekyll!"
+title:  "Твори добро!"
 date:   2023-04-03 19:48:37 +0400
 categories: posts
 description: Это другое описание статьи.

@@ -34,7 +34,7 @@
         if (req.status == 200) {          
           form.reset();
           thanksModal.show();
-        } else if (req.status == 400) {                
+        } else if (req.status == 202) {                
           let invalidInput = form.elements[req.responseText]; 
           invalidInput.classList.add('is-invalid'); 
         } else if (req.status == 503) {

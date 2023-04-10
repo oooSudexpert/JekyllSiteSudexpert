@@ -6,14 +6,18 @@ layout: default
   *************
   {%- include block_callback.html -%}
   *************
+
+  *************
+  {%- include block_question.html -%}
+  *************
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Статьи" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
@@ -27,7 +31,7 @@ layout: default
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">Вы можете подписаться <a href="{{ "/feed.xml" | relative_url }}">на RSS канал</a> наших публикаций.</p>
+    <p class="rss-subscribe">Вы можете подписаться <a href="{{ "/feed.xml" | relative_url }}">на канал</a> наших публикаций.</p>
   {%- endif -%}
 
 </div>

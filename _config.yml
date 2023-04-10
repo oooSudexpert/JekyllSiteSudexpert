@@ -7,14 +7,15 @@ email: sud163@ya.ru
 description: >- # this means to ignore newlines until "baseurl:"
   Независимая экспертиза
 permalink: /:categories/:year/:month/:day/:slug/
+date_format: "%D"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jekyll.garibaldicastle.ru" # the base hostname & protocol for your site, e.g. http://example.com
 telegram_api: "https://functions.yandexcloud.net/d4el63afa9h0t7ogmdt8"
 plugins:
   - jekyll-sitemap
 
-# sass:
-#   style: compressed
+sass:
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

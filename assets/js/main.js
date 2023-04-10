@@ -1,7 +1,8 @@
 (function () {
-  'use strict'
-  
+  'use strict'  
+
   function ready() {
+    var thanksModal = new bootstrap.Modal('#thanksModal', {});
     const forms = document.querySelectorAll('.form-callback')
     
     // Loop over them and prevent submission
@@ -31,19 +32,12 @@
         if(req.status == 200){
           // form.classList.add('was-validated');
           form.reset();
+          thanksModal.show();
         }   
         
       }, false)
     })
   }
-
-  function onlyPhoneNumber (str){
-    str = String(str); //
-    var regexp = /[\d]/g; //выбираем только цифры
-    var NumbersArr = String(str.match(regexp)); //делаем из элемента массива с цфрами - строку, получаем их через запятую
-    var NumbersStr = NumbersArr.replace( /,/g, "" ); //убираем запятую  
-    return NumbersStr;
-  };
 
   document.addEventListener("DOMContentLoaded", ready);
 })()

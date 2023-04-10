@@ -1,40 +1,37 @@
 (function () {
-  'use strict'  
+  'use strict'
 
   function ready() {
-    var thanksModal = new bootstrap.Modal('#thanksModal', {});
+    const thanksModal = new bootstrap.Modal('#thanksModal', {});
     const forms = document.querySelectorAll('.form-callback')
-    
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {    
+
+    Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
 
         event.preventDefault()
         event.stopPropagation()
 
-        let url = form.action;
-        const formData = new FormData(form);  
+        const url = form.action;
+        const formData = new FormData(form);
 
-        console.log(formData.get("required"));
-
-        if( (formData.get("required")).length > 0 ){ // проверка на спам
-          return;    
+        if ((formData.get("required")).length > 0) { // проверка на спамботов
+          return;
         }
-        
-        const params = Array.from(formData);  
-        let query = new URLSearchParams(params);
-        const queryString = query.toString();
 
-        let req = new XMLHttpRequest();
+        const params = Array.from(formData);
+        let query = new URLSearchParams(params);
+        let queryString = query.toString();
+
+        const req = new XMLHttpRequest();
         req.open("GET", url + '?' + queryString, false);
         req.send(null);
-        console.log(req);
-        if(req.status == 200){
+        console.log(req.status);
+        if (req.status == 200) {
           // form.classList.add('was-validated');
           form.reset();
           thanksModal.show();
-        }   
-        
+        }
+
       }, false)
     })
   }

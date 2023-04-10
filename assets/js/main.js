@@ -24,13 +24,24 @@
 
         const req = new XMLHttpRequest();
         req.open("GET", url + '?' + queryString, false);
-        req.send(null);
-        console.log(req.status);
-        if (req.status == 200) {
-          // form.classList.add('was-validated');
+        req.send();
+
+        form.phone.classList.remove('is-invalid');  
+        if (form.message !== undefined) {
+          form.message.classList.remove('is-invalid'); 
+        }
+
+        if (req.status == 200) {          
           form.reset();
           thanksModal.show();
-        }
+        } else if (req.status == 400) {                
+          let invalidInput = form.elements[req.responseText]; 
+          invalidInput.classList.add('is-invalid'); 
+        } else if (req.status == 503) {
+          alert('Сервис доставки сообщений временно не доступен.');
+        } else {
+          alert('Ошибка HTTP ' + req.status);
+        }        
 
       }, false)
     })

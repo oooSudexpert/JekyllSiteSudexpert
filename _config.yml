@@ -14,8 +14,8 @@ telegram_api: "https://functions.yandexcloud.net/d4el63afa9h0t7ogmdt8"
 plugins:
   - jekyll-sitemap
 
-sass:
-  style: compressed
+# sass:
+#   style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

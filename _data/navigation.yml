@@ -1,17 +1,17 @@
 - title: Главная
   url: /
 
-- title: О нас
-  url: /about/
+- title: Экспертиза
+  url: /expertise/
 
-- title: Услуги
-  url: /services/
+- title: Оценка
+  url: /appraisal/
   
 - title: Цены
-  url: /prices/
-
-- title: Статьи
-  url: /articles/
+  url: /cost/
 
 - title: Контакты
   url: /contacts/
+  
+- title: Практика
+  url: /practice/
